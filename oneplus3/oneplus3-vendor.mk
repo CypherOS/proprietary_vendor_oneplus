@@ -512,6 +512,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/oneplus3/proprietary/etc/permissions/qti-vzw-ims-internal.xml:system/etc/permissions/qti-vzw-ims-internal.xml \
     vendor/oneplus/oneplus3/proprietary/etc/permissions/qti_permissions.xml:system/etc/permissions/qti_permissions.xml \
     vendor/oneplus/oneplus3/proprietary/etc/permissions/telephonyservice.xml:system/etc/permissions/telephonyservice.xml \
+	vendor/oneplus/oneplus3/proprietary/etc/permissions/com.qualcomm.qti.Performance.xml:/system/etc/permissions/com.qualcomm.qti.Performance.xml \
     vendor/oneplus/oneplus3/proprietary/etc/thermal-engine.conf:system/etc/thermal-engine.conf \
     vendor/oneplus/oneplus3/proprietary/etc/xtra_root_cert.pem:system/etc/xtra_root_cert.pem \
     vendor/oneplus/oneplus3/proprietary/framework/ConnectivityExt.jar:system/framework/ConnectivityExt.jar \
@@ -843,6 +844,10 @@ PRODUCT_PACKAGES += \
     imssettings \
     qcnvitems \
     qcrilhook
+	
+PRODUCT_PACKAGES += \
+    QPerformance
+	
 endif
 
 -include vendor/extra/devices.mk
@@ -864,3 +869,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/oneplus3/proprietary/vendor/lib64/libqti-iop.so:system/vendor/lib64/libqti-iop.so \
     vendor/oneplus/oneplus3/proprietary/vendor/lib64/libqti-perfd-client.so:system/vendor/lib64/libqti-perfd-client.so
 endif
+
+PRODUCT_COPY_FILES += \
+    vendor/oneplus/oneplus3/proprietary/vendor/lib/libqti_performance.so:/system/vendor/lib/libqti_performance.so \
+    vendor/oneplus/oneplus3/proprietary/vendor/lib64/libqti_performance.so:/system/vendor/lib64/libqti_performance.so
